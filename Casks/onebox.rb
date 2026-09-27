@@ -5,25 +5,21 @@ cask "onebox" do
   on_macos do
     on_arm do
       sha256 "77db59869129c5e35923a60e800f271f1c7146de040c249ca481ec8ae7f3781f"
-      url "https://github.com/labstack/onebox/releases/download/v#{version}/onebox_#{version}_darwin_arm64.tar.gz",
-        verified: "github.com/labstack/onebox/"
+      url "https://github.com/labstack/onebox/releases/download/v#{version}/onebox_#{version}_darwin_arm64.tar.gz"
     end
     on_intel do
       sha256 "e564a65a80c95f79b7a30ce431478eef789bb40f65af6e48efb4eb3c4d9d9ea4"
-      url "https://github.com/labstack/onebox/releases/download/v#{version}/onebox_#{version}_darwin_amd64.tar.gz",
-        verified: "github.com/labstack/onebox/"
+      url "https://github.com/labstack/onebox/releases/download/v#{version}/onebox_#{version}_darwin_amd64.tar.gz"
     end
   end
   on_linux do
     on_arm do
       sha256 "f11dcdc81668b6cd1b011a685f274a0bf97dd502eeb03aaf45df93e47200314f"
-      url "https://github.com/labstack/onebox/releases/download/v#{version}/onebox_#{version}_linux_arm64.tar.gz",
-        verified: "github.com/labstack/onebox/"
+      url "https://github.com/labstack/onebox/releases/download/v#{version}/onebox_#{version}_linux_arm64.tar.gz"
     end
     on_intel do
       sha256 "114bd8e954b8d31a4603402c4822324db6b0663f8a216e502aa274da63c3999d"
-      url "https://github.com/labstack/onebox/releases/download/v#{version}/onebox_#{version}_linux_amd64.tar.gz",
-        verified: "github.com/labstack/onebox/"
+      url "https://github.com/labstack/onebox/releases/download/v#{version}/onebox_#{version}_linux_amd64.tar.gz"
     end
   end
 
