@@ -2,15 +2,15 @@
 cask "driga" do
   app "Driga.app"
 
-  version "2026.10.16-alpha"
+  version "2026.10.17-alpha"
 
   on_macos do
     on_arm do
-      sha256 "005d8f2756d363693cd723479d3e1faf416d97fb230846535b39e45e1367660f"
+      sha256 "6c8a9b435c040e7c098d0769d692ac79f67480072dd46f2746c61bba7dbe33a6"
       url "https://github.com/labstack/driga/releases/download/v#{version}/driga_#{version}_darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "7c069175b7ee5583ef82e204bf2b3906cc4926e842b21ccab683f6bf06c7d90c"
+      sha256 "491895490fb9638e6fd89ff773ce95168147726f465e25685007c21270a90641"
       url "https://github.com/labstack/driga/releases/download/v#{version}/driga_#{version}_darwin_amd64.tar.gz"
     end
   end
@@ -29,8 +29,9 @@ cask "driga" do
 
   caveats <<~EOS
     Driga.app is in /Applications, and driga links to the CLI inside it.
-    Open Driga from Finder, Spotlight or with driga app. The app collects in
-    the background and starts at login. After upgrading from an earlier
-    release, open Driga once: it replaces the old background service.
+    Open Driga from Finder, Spotlight or with driga app. Its first launch
+    installs the Driga service (drigad), which collects at login whether or
+    not the app is open. After upgrading from an earlier release, open Driga
+    once: it replaces the old collector.
   EOS
 end
