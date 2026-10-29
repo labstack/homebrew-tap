@@ -2,15 +2,15 @@
 cask "driga" do
   app "Driga.app"
 
-  version "2026.10.19-alpha"
+  version "2026.10.20-alpha"
 
   on_macos do
     on_arm do
-      sha256 "a8100403ac1d938651d164d33497c3fe511e6e95a2a07422505f5ae3ee09f677"
+      sha256 "ce09a8e99f2004eb37a7ea1f4d34d52377cb1396701f531e624b2beb6caad554"
       url "https://github.com/labstack/driga/releases/download/v#{version}/driga_#{version}_darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "ab8f29bfa56b040332b9748487726a0bab0b6c578ff5838f14845fce917f9a16"
+      sha256 "25f6147113ded472f17fb4cc56c0c2b5d74e9e73a19546472f8867646f65fdc6"
       url "https://github.com/labstack/driga/releases/download/v#{version}/driga_#{version}_darwin_amd64.tar.gz"
     end
   end
