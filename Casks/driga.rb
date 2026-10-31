@@ -9,22 +9,25 @@ cask "driga" do
       previous = system_command "/usr/bin/plutil",
                                 args: ["-convert", "json", "-o", "-", File.expand_path("~/Library/LaunchAgents/run.driga.service.plist")],
                                 must_succeed: true
-      system_command "#{appdir}/Driga.app/Contents/MacOS/driga",
-                     args: ["service", "install"],
-                     env: JSON.parse(previous.stdout).fetch("EnvironmentVariables", {}),
+      # system_command shell-escapes env: values yet runs no shell, so a
+      # value with a space would gain a literal backslash. /usr/bin/env
+      # takes these assignments verbatim.
+      environment = JSON.parse(previous.stdout).fetch("EnvironmentVariables", {}).map { |name, value| "#{name}=#{value}" }
+      system_command "/usr/bin/env",
+                     args: [*environment, "#{appdir}/Driga.app/Contents/MacOS/driga", "service", "install"],
                      must_succeed: true
     end
   end
 
-  version "2026.10.26-alpha"
+  version "2026.10.27-alpha"
 
   on_macos do
     on_arm do
-      sha256 "ee49ff2c2b2ada9ccdb3dd9ba593c929ab9a81a5b9480b7c0f967de2304f111c"
+      sha256 "e0d22e0d03454cacf4adf532e718d9f814dbb8147b34989325d309a1c7bcf93f"
       url "https://github.com/labstack/driga/releases/download/v#{version}/driga_#{version}_darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "b310d9aed3e82ae002ae7b86cd0ab6e74760947e52f07e18a9322c3751c2b2b9"
+      sha256 "7b73f7d22ede29f22ae85f02524301a56b1ae748ae4f730a43a491ea74818a3d"
       url "https://github.com/labstack/driga/releases/download/v#{version}/driga_#{version}_darwin_amd64.tar.gz"
     end
   end
