@@ -16,15 +16,15 @@ cask "driga" do
     end
   end
 
-  version "2026.10.25-alpha"
+  version "2026.10.26-alpha"
 
   on_macos do
     on_arm do
-      sha256 "fa5c035fc8405ee44b8dcd6bf87f9aef5881994327fc1d6ab496ce2804bf03a1"
+      sha256 "ee49ff2c2b2ada9ccdb3dd9ba593c929ab9a81a5b9480b7c0f967de2304f111c"
       url "https://github.com/labstack/driga/releases/download/v#{version}/driga_#{version}_darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "c4ab580a77207b06886773765332916e3a0a9f0e798a6b0ff753e6810379e499"
+      sha256 "b310d9aed3e82ae002ae7b86cd0ab6e74760947e52f07e18a9322c3751c2b2b9"
       url "https://github.com/labstack/driga/releases/download/v#{version}/driga_#{version}_darwin_amd64.tar.gz"
     end
   end
