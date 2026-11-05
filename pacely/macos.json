@@ -1,0 +1,9 @@
+{
+  "schema": "pacely.download/1",
+  "version": "2026.11.0-beta.1",
+  "beta": true,
+  "certified": false,
+  "sha256": "249ce2308722ec9680e3cf69dba39ea48e5ec680e12e1be2ec766a5fbab9fdd3",
+  "url": "https://github.com/labstack/homebrew-tap/releases/download/pacely-v2026.11.0-beta.1/pacely-2026.11.0-beta.1.pkg",
+  "source_revision": "df189ddc709a28fd3c1bc1fc1d93ae20419733e4"
+}
