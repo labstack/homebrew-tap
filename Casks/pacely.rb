@@ -1,8 +1,8 @@
 cask "pacely" do
-  version "2026.11.0-beta.3"
-  sha256 "38acfc4b65dc9ba93b7f939ade386aff51199026cadb484b6fe7df1a6add6987"
+  version "2026.11.0-beta.4"
+  sha256 "95963caf2920e5a3a32b2a8525b07897e5a1b5524b53dded8b999b02b49085a6"
 
-  url "https://github.com/labstack/homebrew-tap/releases/download/pacely-v2026.11.0-beta.3/pacely-2026.11.0-beta.3.pkg"
+  url "https://github.com/labstack/homebrew-tap/releases/download/pacely-v2026.11.0-beta.4/pacely-2026.11.0-beta.4.pkg"
   name "Pacely"
   desc "Selected-account computer time limits (Beta)"
   homepage "https://pacely.app/install/mac"
@@ -10,7 +10,7 @@ cask "pacely" do
   auto_updates true
   depends_on macos: :tahoe
 
-  pkg "pacely-2026.11.0-beta.3.pkg"
+  pkg "pacely-2026.11.0-beta.4.pkg"
 
   # Native preparation verifies restrictions and removes all session agents
   # and the setup CLI link. Homebrew owns daemon and package removal; private
@@ -30,7 +30,11 @@ cask "pacely" do
     Run sudo /Library/PrivilegedHelperTools/pacelyd setup,
     then pair through your adult assistant.
     Removal verifies account-access restoration before stopping the service.
-    Homebrew replacement requires running setup again; state is retained.
+    Homebrew upgrades from marker-capable binaries resume verified enforcement automatically.
+    The first upgrade from an older binary requires administrator recovery:
+    run sudo /Library/PrivilegedHelperTools/pacelyd uninstall cancel,
+    then sudo /Library/PrivilegedHelperTools/pacelyd recover enrollment.
+    State is retained. To forget this device, run sudo pacely uninstall.
     Automatic updates remain gated on the production TUF key ceremony.
   EOS
 end
