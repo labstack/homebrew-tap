@@ -1,8 +1,8 @@
 cask "pacely" do
-  version "2026.11.0-beta.7"
-  sha256 "41c943795c6e5b87253709e24d3fae4f5fd74737863f072b1a6ee2df0ebe5035"
+  version "2026.11.0-beta.8"
+  sha256 "7a411a565e1d9d515dfe03ddfab19befc4243626273ae2a311001cac90e342b5"
 
-  url "https://github.com/labstack/homebrew-tap/releases/download/pacely-v2026.11.0-beta.7/pacely-2026.11.0-beta.7.pkg"
+  url "https://github.com/labstack/homebrew-tap/releases/download/pacely-v2026.11.0-beta.8/pacely-2026.11.0-beta.8.pkg"
   name "Pacely"
   desc "Selected-account computer time limits (Beta)"
   homepage "https://pacely.app/install/mac"
@@ -10,7 +10,7 @@ cask "pacely" do
   auto_updates true
   depends_on macos: :tahoe
 
-  pkg "pacely-2026.11.0-beta.7.pkg"
+  pkg "pacely-2026.11.0-beta.8.pkg"
 
   # Native preparation verifies restrictions and removes all session agents
   # and the setup CLI link. Homebrew owns daemon and package removal; private
@@ -31,7 +31,7 @@ cask "pacely" do
 
   caveats <<~EOS
     Beta: signed and notarized; enforcement is verified at runtime on macOS 26+ Apple silicon.
-    Keep a parent administrator account and a separate child Standard account.
+    Keep an administrator account and a separate standard account for the person.
     Run sudo /Library/PrivilegedHelperTools/pacelyd setup,
     then pair through your adult assistant.
     Removal verifies account-access restoration before stopping the service.
