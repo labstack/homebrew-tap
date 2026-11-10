@@ -1,8 +1,8 @@
 cask "pacely" do
-  version "2026.11.0-beta.8"
-  sha256 "7a411a565e1d9d515dfe03ddfab19befc4243626273ae2a311001cac90e342b5"
+  version "2026.11.0-beta.9"
+  sha256 "2e73e4541f4f480700013543099f70e7a6354c07663a46202dad89c0f0b77a33"
 
-  url "https://github.com/labstack/homebrew-tap/releases/download/pacely-v2026.11.0-beta.8/pacely-2026.11.0-beta.8.pkg"
+  url "https://github.com/labstack/homebrew-tap/releases/download/pacely-v2026.11.0-beta.9/pacely-2026.11.0-beta.9.pkg"
   name "Pacely"
   desc "Selected-account computer time limits (Beta)"
   homepage "https://pacely.app/install/mac"
@@ -10,7 +10,7 @@ cask "pacely" do
   auto_updates true
   depends_on macos: :tahoe
 
-  pkg "pacely-2026.11.0-beta.8.pkg"
+  pkg "pacely-2026.11.0-beta.9.pkg"
 
   # Native preparation verifies restrictions and removes all session agents
   # and the setup CLI link. Homebrew owns daemon and package removal; private
